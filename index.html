@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>フォーム送信</title>
+    <title>データベース操作アプリ</title>
 </head>
 <body>
-    <h1>入力フォーム</h1>
-    <form action="insert.php" method="post">
-        <label for="fruit">果物:</label>
-        <input name="fruit" type="text" required>
-        <label for="color">色:</label>
-        <input name="color" type="text" required>
-        <button>データを送信</button>
+    <h1>簡易データベース操作システム</h1>
+
+    <form action="insert.html" method="post">
+        <button>追加</button>
     </form>
 
-    <form action="select.php" method="post">
-        <button>データベース情報を表示</button>
+    <form action="php/select.php" method="post">
+        <button>表示</button>
+    </form>
+
+    <form action="php/delete.php" method="post">
+        <button>削除</button>
     </form>
 </body>
 </html>
