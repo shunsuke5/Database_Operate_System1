@@ -11,15 +11,26 @@ try {
     $stmt = $dbh->query("SELECT * FROM fruit");
     if(!$stmt) { echo "クエリが失敗しました"; }
     $result = $stmt->fetchAll();
-    foreach($result as $key => $val) {
-        // echo $val['name'] . "&nbsp";
-        // echo $val['color'] . "<br>";
-        echo <<< 'EOD'
-        <p><?= $val['name'] ?></p>
-        <p><?= $val['color'] ?></P>
-        EOD;
-    }
+?>
 
+<link rel="stylesheet" href="../style.css">
+
+<table>
+    <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">COLOR</th>
+    </tr>
+
+    <?php foreach($result as $key => $val): ?>
+        <tr>
+            <th scope="row"><?= $val['name'] ?></th>
+            <td><?= $val['color'] ?></td>
+        </tr>
+    <?php endforeach; ?>
+
+</table>
+
+<?php
 } catch (PDOException $e) {
     echo "接続に失敗しました";
     echo $e->getMessage();
