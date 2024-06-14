@@ -35,13 +35,24 @@
 
 ・次はfetchAll()の結果をHTMLで出力するところから、上記サイトがまた参考になりそう。
 
+###20240614###
+
+・phpの値をHTMLで出力することができた。以下のような記述。
+
+    <h1><?= $val['name'] ?>&nbsp;<?= $val['color'] ?></h1>
+
+・HTMLで表を出力し、そこにphpの値を格納したい。phpにcssを読み込ませるところから。
+
 [進捗]
+・phpにcssを読み込ませる
+
 insert.php
 ・
 
 select.php
+・表を作成し、その中にデータベース内容を表示する
 ・テーブルのキーを取得して表の一番上にそれを表示する
-・phpの変数をHTML形式で表示する
+
 
 delete.php
 ・
@@ -53,6 +64,7 @@ insert.php
 
 select.php
 ・fetchAll()の結果をわかりやすく表示する
+・phpの変数をHTML形式で表示する
 
 delete.php
 
