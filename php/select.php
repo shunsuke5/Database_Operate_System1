@@ -35,3 +35,8 @@ try {
     echo "接続に失敗しました";
     echo $e->getMessage();
 }
+?>
+
+<form action="../index.html" method="post">
+    <button>戻る</button>
+</form>
